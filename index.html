@@ -1603,12 +1603,210 @@
             </div>
         </div>
 
-        <!-- 26: Итоги -->
+        <!-- 30: Условия и управление потоком (bridge) -->
+        <div class="slide">
+            <div class="slide-content">
+                <p class="eyebrow">Следующая тема</p>
+                <h1>Условия и<br/>управление потоком</h1>
+                <p class="subtitle">Программа принимает решения на основе входных данных</p>
+                <div class="topic-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 600px;">
+                    <div class="topic-cell">Сравнения</div>
+                    <div class="topic-cell">and · or · not</div>
+                    <div class="topic-cell">if / elif / else</div>
+                    <div class="topic-cell">Отступы</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 31: Сравнение значений -->
+        <div class="slide">
+            <div class="slide-content">
+                <p class="eyebrow">Тема 09</p>
+                <h2>Сравнение значений</h2>
+                <p class="subtitle">Операторы сравнения возвращают True или False</p>
+                <div class="code-block" style="max-width: 720px;"><span class="cm">5</span> == <span class="cm">5</span>      <span class="co"># True</span>
+<span class="cm">5</span> != <span class="cm">3</span>      <span class="co"># True</span>
+<span class="cm">5</span> &lt; <span class="cm">3</span>       <span class="co"># False</span>
+<span class="cm">5</span> &gt; <span class="cm">3</span>       <span class="co"># True</span>
+<span class="cm">5</span> &gt;= <span class="cm">5</span>      <span class="co"># True</span>
+<span class="cs">"a"</span> == <span class="cs">"a"</span>  <span class="co"># True</span></div>
+                <div class="quote-card" style="margin-top: 28px;">
+                    <div class="label">Внимание</div>
+                    <p>Не путайте <span style="font-family: 'SF Mono', monospace; color: #007aff;">==</span> (сравнение) и <span style="font-family: 'SF Mono', monospace; color: #007aff;">=</span> (присваивание).</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 32: Логические операторы -->
+        <div class="slide">
+            <div class="slide-content">
+                <p class="eyebrow">Тема 10</p>
+                <h2>Логические операторы</h2>
+                <p class="subtitle">and · or · not</p>
+                <div class="code-block" style="max-width: 760px;"><span class="cn">age</span> = <span class="cm">25</span>
+
+<span class="cn">age</span> &gt;= <span class="cm">18</span> <span class="ck">and</span> <span class="cn">age</span> &lt; <span class="cm">65</span>   <span class="co"># True</span>
+<span class="cn">age</span> &lt; <span class="cm">18</span> <span class="ck">or</span> <span class="cn">age</span> &gt; <span class="cm">65</span>     <span class="co"># False</span>
+<span class="ck">not</span> (<span class="cn">age</span> &gt;= <span class="cm">18</span>)            <span class="co"># False</span></div>
+                <div class="quote-card" style="margin-top: 24px;">
+                    <div class="label">Семантика</div>
+                    <p><span style="font-family: 'SF Mono', monospace; color: #007aff;">and</span> требует оба условия истинными. <span style="font-family: 'SF Mono', monospace; color: #007aff;">or</span> требует хотя бы одно. <span style="font-family: 'SF Mono', monospace; color: #007aff;">not</span> инвертирует значение.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 33: Вопрос - сравнение разных типов -->
+        <div class="slide">
+            <div class="slide-content">
+                <p class="eyebrow">Вопрос</p>
+                <h2>Что выведет код?</h2>
+                <div class="code-block" style="max-width: 480px;"><span class="cn">x</span> = <span class="cm">10</span>
+
+<span class="cf">print</span>(<span class="cn">x</span> == <span class="cs">"10"</span>)</div>
+                <div class="options-grid">
+                    <div class="option-card"><span class="option-letter">A</span><code>True</code></div>
+                    <div class="option-card"><span class="option-letter">B</span><code>False</code></div>
+                    <div class="option-card"><span class="option-letter">C</span><code>TypeError</code></div>
+                    <div class="option-card"><span class="option-letter">D</span><code>"10"</code></div>
+                </div>
+                <p class="think-hint">Подумайте минуту →</p>
+            </div>
+        </div>
+
+        <!-- 34: Условный оператор if -->
+        <div class="slide">
+            <div class="slide-content">
+                <p class="eyebrow">Тема 11</p>
+                <h2>Условный оператор if</h2>
+                <p class="subtitle">Двоеточие в конце строки. Отступ четыре пробела.</p>
+                <div class="code-block" style="max-width: 760px;"><span class="cn">age</span> = <span class="cm">20</span>
+
+<span class="ck">if</span> <span class="cn">age</span> &gt;= <span class="cm">18</span>:
+    <span class="cf">print</span>(<span class="cs">"Совершеннолетний"</span>)
+    <span class="cf">print</span>(<span class="cs">"Имеет право голосовать"</span>)</div>
+                <div class="quote-card" style="margin-top: 28px;">
+                    <div class="label">Важно</div>
+                    <p>Отступ это часть синтаксиса языка, а не оформление. Без отступа Python выдаст <span style="font-family: 'SF Mono', monospace; color: #ff3b30;">IndentationError</span>.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 35: if / else -->
+        <div class="slide">
+            <div class="slide-content">
+                <p class="eyebrow">Тема 12</p>
+                <h2>if / else</h2>
+                <p class="subtitle">Две взаимоисключающие ветви исполнения</p>
+                <div class="code-output">
+                    <div class="code-block" style="margin-top: 0;"><span class="cn">age</span> = <span class="cm">15</span>
+
+<span class="ck">if</span> <span class="cn">age</span> &gt;= <span class="cm">18</span>:
+    <span class="cf">print</span>(<span class="cs">"Совершеннолетний"</span>)
+<span class="ck">else</span>:
+    <span class="cf">print</span>(<span class="cs">"Несовершеннолетний"</span>)</div>
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 14px; padding: 12px;">
+                        <div style="padding: 12px 24px; border: 2px solid #007aff; border-radius: 50px; background: rgba(0,122,255,0.06); font-family: 'SF Mono', monospace; font-size: clamp(13px, 1.5vw, 15px); color: #007aff; font-weight: 600;">age &gt;= 18 ?</div>
+                        <div style="display: flex; gap: 16px;">
+                            <div style="text-align: center;">
+                                <div style="font-size: 11px; color: #34c759; font-weight: 700; letter-spacing: 0.14em;">TRUE</div>
+                                <div style="margin-top: 6px; padding: 10px 14px; border: 1px solid rgba(52,199,89,0.3); border-radius: 12px; font-size: clamp(12px, 1.4vw, 14px); color: #1d1d1f;">«Совершеннолетний»</div>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="font-size: 11px; color: #ff3b30; font-weight: 700; letter-spacing: 0.14em;">FALSE</div>
+                                <div style="margin-top: 6px; padding: 10px 14px; border: 1px solid rgba(255,59,48,0.3); border-radius: 12px; font-size: clamp(12px, 1.4vw, 14px); color: #1d1d1f;">«Несовершеннолетний»</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 36: if / elif / else -->
+        <div class="slide">
+            <div class="slide-content">
+                <p class="eyebrow">Тема 13</p>
+                <h2>if / elif / else</h2>
+                <p class="subtitle">Несколько последовательных условий</p>
+                <div class="code-block" style="max-width: 800px;"><span class="cn">score</span> = <span class="cm">85</span>
+
+<span class="ck">if</span> <span class="cn">score</span> &gt;= <span class="cm">90</span>:
+    <span class="cn">grade</span> = <span class="cs">"A"</span>
+<span class="ck">elif</span> <span class="cn">score</span> &gt;= <span class="cm">80</span>:
+    <span class="cn">grade</span> = <span class="cs">"B"</span>
+<span class="ck">elif</span> <span class="cn">score</span> &gt;= <span class="cm">70</span>:
+    <span class="cn">grade</span> = <span class="cs">"C"</span>
+<span class="ck">else</span>:
+    <span class="cn">grade</span> = <span class="cs">"F"</span>
+
+<span class="cf">print</span>(<span class="cn">grade</span>)</div>
+                <div class="quote-card" style="margin-top: 24px;">
+                    <div class="label">Замечание</div>
+                    <p><span style="font-family: 'SF Mono', monospace; color: #007aff;">elif</span> это сокращение от <span style="font-family: 'SF Mono', monospace; color: #007aff;">else if</span>. Количество ветвей не ограничено.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 37: Практика 2 -->
+        <div class="slide">
+            <div class="slide-content">
+                <p class="eyebrow">Практика 2</p>
+                <h2>Определение чётности</h2>
+                <div class="timer-display">15:00</div>
+                <ol style="list-style: none; padding: 0; max-width: 760px; counter-reset: q; text-align: left;">
+                    <li style="padding: 12px 0 12px 48px; position: relative; font-size: clamp(15px, 1.8vw, 19px); color: #1d1d1f; border-bottom: 1px solid rgba(0,0,0,0.06); counter-increment: q;">
+                        <span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 30px; height: 30px; border-radius: 50%; background: rgba(0,122,255,0.1); color: #007aff; font-size: 14px; font-weight: 700; display: flex; align-items: center; justify-content: center;">1</span>
+                        Запросить у пользователя целое число
+                    </li>
+                    <li style="padding: 12px 0 12px 48px; position: relative; font-size: clamp(15px, 1.8vw, 19px); color: #1d1d1f; border-bottom: 1px solid rgba(0,0,0,0.06);">
+                        <span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 30px; height: 30px; border-radius: 50%; background: rgba(0,122,255,0.1); color: #007aff; font-size: 14px; font-weight: 700; display: flex; align-items: center; justify-content: center;">2</span>
+                        Если значение равно нулю - вывести «Ноль»
+                    </li>
+                    <li style="padding: 12px 0 12px 48px; position: relative; font-size: clamp(15px, 1.8vw, 19px); color: #1d1d1f; border-bottom: 1px solid rgba(0,0,0,0.06);">
+                        <span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 30px; height: 30px; border-radius: 50%; background: rgba(0,122,255,0.1); color: #007aff; font-size: 14px; font-weight: 700; display: flex; align-items: center; justify-content: center;">3</span>
+                        Если число делится на 2 без остатка - вывести «Чётное»
+                    </li>
+                    <li style="padding: 12px 0 12px 48px; position: relative; font-size: clamp(15px, 1.8vw, 19px); color: #1d1d1f;">
+                        <span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 30px; height: 30px; border-radius: 50%; background: rgba(0,122,255,0.1); color: #007aff; font-size: 14px; font-weight: 700; display: flex; align-items: center; justify-content: center;">4</span>
+                        В противном случае - вывести «Нечётное»
+                    </li>
+                </ol>
+                <p class="body-text" style="margin-top: 28px; font-size: clamp(13px, 1.5vw, 16px); color: #86868b;">
+                    Подсказка: оператор <span style="font-family: 'SF Mono', monospace; color: #007aff;">%</span> возвращает остаток от деления.
+                </p>
+            </div>
+        </div>
+
+        <!-- 38: Разбор решения 2 -->
+        <div class="slide">
+            <div class="slide-content">
+                <p class="eyebrow">Решение</p>
+                <h2>Разбор решения 2</h2>
+                <div class="code-block" style="max-width: 820px;"><span class="cn">n</span> = <span class="cf">int</span>(<span class="cf">input</span>(<span class="cs">"Введите целое число: "</span>))
+
+<span class="ck">if</span> <span class="cn">n</span> == <span class="cm">0</span>:
+    <span class="cf">print</span>(<span class="cs">"Ноль"</span>)
+<span class="ck">elif</span> <span class="cn">n</span> % <span class="cm">2</span> == <span class="cm">0</span>:
+    <span class="cf">print</span>(<span class="cs">f"<span style="color: #ff79c6;">{n}</span> - чётное"</span>)
+<span class="ck">else</span>:
+    <span class="cf">print</span>(<span class="cs">f"<span style="color: #ff79c6;">{n}</span> - нечётное"</span>)</div>
+                <div class="flow-row">
+                    <span class="step-pill">ввод</span>
+                    <span class="arrow">→</span>
+                    <span class="step-pill">проверка нуля</span>
+                    <span class="arrow">→</span>
+                    <span class="step-pill">проверка остатка</span>
+                    <span class="arrow">→</span>
+                    <span class="step-pill">вывод</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 39: Итоги -->
         <div class="slide">
             <div class="slide-content">
                 <p class="eyebrow">Итоги</p>
                 <h2>Итоги урока</h2>
-                <ul class="checklist" style="max-width: 760px; columns: 2; column-gap: 40px;">
+                <ul class="checklist" style="max-width: 820px; columns: 2; column-gap: 40px;">
                     <li>Python и VS Code установлены</li>
                     <li>Терминал и базовые команды</li>
                     <li>Первый .py файл, запуск программы</li>
@@ -1616,10 +1814,13 @@
                     <li>int, float, str, bool</li>
                     <li>Арифметика, f-строки, комментарии</li>
                     <li>Чтение traceback</li>
+                    <li>Сравнение значений</li>
+                    <li>Логические операторы</li>
+                    <li>if / elif / else</li>
                 </ul>
                 <div class="quote-card" style="margin-top: 32px;">
                     <div class="label">Следующий урок</div>
-                    <p>if / else <span style="color: #86868b; font-weight: 400;">- условия и развилки</span></p>
+                    <p>Циклы <span style="color: #86868b; font-weight: 400;">- while, for и списки</span></p>
                 </div>
             </div>
         </div>
@@ -1655,7 +1856,7 @@
 
     <div class="lesson-tag">Python · Урок 1</div>
     <div class="slide-indicator">
-        <span id="current-slide">1</span> / <span id="total-slides">32</span>
+        <span id="current-slide">1</span> / <span id="total-slides">41</span>
     </div>
     <div class="nav-hint">→ или Space - далее<br/>← - назад</div>
 
